@@ -15,7 +15,7 @@ app.use("/api/student",router)
 
 async function initializeDataSource() {
     try {
-        const port = process.env.PORT
+        const port = process.env.PORT || 3000
 
         await AppDataSource.initialize()
       
