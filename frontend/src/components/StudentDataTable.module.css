@@ -1,0 +1,161 @@
+.container {
+    min-height: 100vh;
+    padding: 40px;
+    background: #fff8fa;
+    font-family: Arial, sans-serif;
+    color: #29232a;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.title {
+    margin: 0;
+    color: #8f2346;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 8px 0 0;
+    color: #77717a;
+    font-size: 14px;
+}
+
+.addButton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #922344;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.addButton:hover {
+    background: #741a36;
+    transform: translateY(-1px);
+}
+
+.tableCard {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #f0dce2;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(112, 35, 59, 0.08);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table thead {
+    background: #922344;
+    color: #ffffff;
+}
+
+.table th {
+    padding: 17px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #f1e6ea;
+    font-size: 14px;
+    color: #494149;
+}
+
+.table tbody tr {
+    transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+    background: #fff5f7;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.editButton,
+.deleteButton {
+    padding: 8px 13px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.editButton {
+    border: 1px solid #e4c2ce;
+    background: #fbecf1;
+    color: #8f2346;
+}
+
+.editButton:hover {
+    background: #f4dce5;
+}
+
+.deleteButton {
+    border: 1px solid #f0caca;
+    background: #fff0f0;
+    color: #b42323;
+}
+
+.deleteButton:hover {
+    background: #ffdddd;
+}
+
+.noData {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    color: #922344;
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 12px;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px;
+    }
+}
