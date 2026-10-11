@@ -1,26 +1,28 @@
-import axios from "axios";
+
 import type { Student, StudentFormData } from "../studenttypes";
+import api from "../api/axios";
 
 
-const API_URL = "http://localhost:3000/api/student"
+// const API_URL = "http://localhost:3000/api/student"
+const API = "/api/student"
 
 export const getAllStudents = async ()=>{
-    const response = await axios.get(API_URL)
+    const response = await api.get(API)
     return response
 }
 
 export const addNewStudent = async (data:StudentFormData)=>{
-    const response = await axios.post(API_URL,data)
+    const response = await api.post(API,data)
     return response
 }
 
 export const updateSingleStudent = async (id:string,data:Partial<Student>)=>{
-    const response = await axios.patch(`${API_URL}/${id}`,data)
+    const response = await api.patch(`${API}/${id}`,data)
     return response
 }
 
 export const deleteSingleStudent = async (id:string)=>{
-    const response = await axios.delete(`${API_URL}/${id}`)
+    const response = await api.delete(`${API}/${id}`)
     return response
 
 }
